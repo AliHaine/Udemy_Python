@@ -1,5 +1,5 @@
-todos = []
-
+file = open("todo.txt", 'r+')
+todos = file.read().splitlines()
 
 def get_int_from_input(txt):
     val = int(input(txt))
@@ -11,6 +11,11 @@ def get_int_from_input(txt):
 def show_action():
     for index, txt in enumerate(todos):
         print(f"{index}-{txt}")
+
+def write_to_file():
+    file.seek(0)
+    for txt in todos:
+        file.writelines(txt + "\n")
 
 while True:
     user_action = input("Enter action:\n").strip().lower()
@@ -39,3 +44,6 @@ while True:
             break
         case _:
             print("Try again")
+    write_to_file()
+
+file.close()
