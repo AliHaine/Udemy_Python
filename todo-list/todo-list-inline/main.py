@@ -3,6 +3,7 @@ todos = file.read().splitlines()
 
 
 def get_int_from_txt(txt):
+    """Convert str to int"""
     val = int(txt)
     if val > len(todos) - 1 or val < 0:
         raise ValueError
