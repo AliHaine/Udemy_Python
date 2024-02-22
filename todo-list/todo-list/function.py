@@ -15,3 +15,7 @@ def write_to_file(file, todos):
     file.seek(0)
     for txt in todos:
         file.writelines(txt + "\n")
+
+
+if __name__ == "__main__":
+    print("main")
