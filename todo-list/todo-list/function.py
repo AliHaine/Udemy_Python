@@ -1,3 +1,11 @@
+import os
+
+
+if not (os.path.exists("todo.txt")):
+    with open("todo.txt", 'w') as f:
+        pass
+
+
 file = open("todo.txt", 'r+')
 todos = file.read().splitlines()
 
