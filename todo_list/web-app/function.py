@@ -8,6 +8,7 @@ if not (os.path.exists("todo.txt")):
 
 file = open("todo.txt", 'r+')
 todos = file.read().splitlines()
+file.close()
 
 
 def get_int_from_txt(txt):
@@ -28,7 +29,7 @@ def edit_action(val, txt):
 
 
 def write_to_file():
-    file.seek(0)
+    file = open("todo.txt", 'w')
     for txt in todos:
         file.writelines(txt + "\n")
 
