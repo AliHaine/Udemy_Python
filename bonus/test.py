@@ -9,10 +9,3 @@ while True:
 			todos[txt] = 0
 		except:
 			txt = input("try")
-
-
-def func(a, b, c):
-	print(a,b ,c)
-
-
-func(1, 2, 3)
