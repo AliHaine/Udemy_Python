@@ -1,12 +1,13 @@
 import os
 
+file_name = "data.csv"
 
-if not (os.path.exists("todo.txt")):
-    with open("todo.txt", 'w') as f:
+if not (os.path.exists(file_name)):
+    with open(file_name, 'w') as f:
         pass
 
 
-file = open("todo.txt", 'r+')
+file = open(file_name, 'r+')
 todos = file.read().splitlines()
 file.close()
 
@@ -29,7 +30,7 @@ def edit_action(val, txt):
 
 
 def write_to_file():
-    file = open("todo.txt", 'w')
+    file = open(file_name, 'w')
     for txt in todos:
         file.writelines(txt + "\n")
 
