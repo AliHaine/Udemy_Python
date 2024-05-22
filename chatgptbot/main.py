@@ -36,7 +36,7 @@ class ChatBotWindow(QMainWindow):
 
 class ChatBot:
 	def __init__(self):
-
+		pass
 
 	def get_response(self, user_input):
 		try:
